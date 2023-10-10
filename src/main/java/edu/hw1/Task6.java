@@ -1,57 +1,14 @@
 package edu.hw1;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Task6 {
 
     private Task6() {
     }
 
-    private static int count = 0;
-
-    public static void quickSort(int[] array, int low, int high) {
-        boolean flag = false;
-        if (array.length == 0) {
-            flag = true;
-        } else {
-            if (low >= high) {
-                flag = true;
-            }
-        }
-
-        if (flag) {
-            return;
-        }
-
-        int middle = low + (high - low) / 2;
-        int opora = array[middle];
-
-        int i = low;
-        int j = high;
-        while (i <= j) {
-            while (array[i] < opora) {
-                i++;
-            }
-
-            while (array[j] > opora) {
-                j--;
-            }
-
-            if (i <= j) {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                i++;
-                j--;
-            }
-        }
-
-        if (low < j) {
-            quickSort(array, low, j);
-        }
-
-        if (high > i) {
-            quickSort(array, i, high);
-        }
-    }
+    private final static int kapr = 6174;
 
     @SuppressWarnings("MagicNumber")
     private static int[] digitsOfNumber(int num) {
@@ -90,22 +47,27 @@ public class Task6 {
         return res;
     }
 
+    private static boolean checkNumbers(int[] arr) {
+        boolean res = true;
+        int count = 0;
+        for (int i = 1; arr[i] != -1; ++i) {
+            count += (arr[1] == arr[i]) ? 1: 0;
+        }
+        return count == arr[0];
+    }
+
     @SuppressWarnings("MagicNumber")
     public static int countK(int num) {
-        if (num == 6174 || num < 1012) {
+        if (num == kapr) {
             return 0;
         }
-        ++count;
         int[] digits = digitsOfNumber(num);
-        quickSort(digits, 1, digits[0]);
+        if (num <= 1000 || checkNumbers(digits)) {
+            return -1;
+        }
+        Arrays.sort(digits, 1, digits[0] + 1);
         int[] digitReversed = reverseDigits(digits);
         int res = digitsToNumber(digitReversed) - digitsToNumber(digits);
-        if (res == 6174) {
-            int tmp = count;
-            count = 0;
-            return tmp;
-        } else {
-            return countK(res);
-        }
+        return 1 + countK(res);
     }
 }

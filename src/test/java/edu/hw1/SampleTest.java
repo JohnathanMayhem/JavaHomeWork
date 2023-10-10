@@ -113,10 +113,10 @@ public class SampleTest {
     @DisplayName("Проверка функции Каприкара")
     void checkKap() {
         // given
-        int[] numers = new int[] {6621, 6554, 1234};
-        int[] res = new int[] {5, 4, 3};
-        int[] evenRes = new int[3];
-        for (int i = 0; i < 3; i++) {
+        int[] numers = new int[] {6621, 6554, 1234, 1000};
+        int[] res = new int[] {5, 4, 3, -1};
+        int[] evenRes = new int[4];
+        for (int i = 0; i < 4; i++) {
             evenRes[i] = Task6.countK(numers[i]);
         }
         // then
@@ -126,7 +126,7 @@ public class SampleTest {
     }
 
     @Test
-    @DisplayName("Проверка функции Каприкара")
+    @DisplayName("Проверка Сдвига")
     void checkShift() {
         // given
         int[][] numers = new int[][] {{8, 1}, {16, 1}, {17, 2}};

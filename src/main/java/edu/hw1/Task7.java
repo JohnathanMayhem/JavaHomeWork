@@ -15,15 +15,15 @@ public class Task7 {
 
     public static int rotateLeft(int n, int shift) {
         String num = Integer.toBinaryString(n);
-        StringBuilder newNum = new StringBuilder();
+        StringBuilder newNum = new StringBuilder(num.length());
         for (int i = shift; i < num.length(); i++) {
             newNum.append(num.charAt(i));
         }
         for (int i = 0; i < shift; i++) {
             newNum.append(num.charAt(i));
         }
-        Integer newN = binaryToInt(newNum.toString());
-        return newN;
+        //Integer newN = binaryToInt(newNum.toString());
+        return Integer.parseInt(newNum.toString(), 2);
     }
 
     public static int rotateRight(int n, int shift) {
@@ -36,7 +36,7 @@ public class Task7 {
         for (int i = 0; i < num.length() - shift; i++) {
             newNum.append(num.charAt(i));
         }
-        Integer newN = binaryToInt(newNum.toString());
-        return newN;
+        //Integer newN = binaryToInt(newNum.toString());
+        return Integer.parseInt(newNum.toString(), 2);
     }
 }

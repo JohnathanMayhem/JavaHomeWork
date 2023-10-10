@@ -1,5 +1,7 @@
 package edu.hw1;
 
+import java.lang.reflect.Array;
+
 public class Task3 {
 
     private Task3() {
@@ -70,22 +72,38 @@ public class Task3 {
     }
 
     public static boolean isNestable(int[] a, int[] b) {
+        if (a == null || b == null || a.length == 0 || b.length == 0){
+            return false;
+        }
 
         return (min(a) > min(b) && max(a) < max(b));
     }
 
     public static boolean isNestable(long[] a, long[] b) {
+        if (a == null || b == null){
+            return false;
+        } else if (a.length == 0 || b.length == 0) {
+            return false;
+        }
 
         return (min(a) > min(b) && max(a) < max(b));
     }
 
     public static boolean isNestable(double[] a, double[] b) {
-
+        if (a == null || b == null){
+            return false;
+        } else if (a.length == 0 || b.length == 0) {
+            return false;
+        }
         return (min(a) > min(b) && max(a) < max(b));
     }
 
     public static boolean isNestable(float[] a, float[] b) {
-
+        if (a == null || b == null){
+            return false;
+        } else if (a.length == 0 || b.length == 0) {
+            return false;
+        }
         return (min(a) > min(b) && max(a) < max(b));
     }
 }

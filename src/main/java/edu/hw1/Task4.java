@@ -13,7 +13,6 @@ public class Task4 {
             charArr[i] = charArr[i + 1];
             charArr[i + 1] = tmp;
         }
-        String newStr = new String(charArr);
-        return newStr;
+        return new String(charArr);
     }
 }
