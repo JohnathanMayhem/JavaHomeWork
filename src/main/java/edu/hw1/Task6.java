@@ -1,6 +1,5 @@
 package edu.hw1;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Task6 {
@@ -8,7 +7,7 @@ public class Task6 {
     private Task6() {
     }
 
-    private final static int kapr = 6174;
+    private final static int RAPR = 6174;
 
     @SuppressWarnings("MagicNumber")
     private static int[] digitsOfNumber(int num) {
@@ -51,14 +50,14 @@ public class Task6 {
         boolean res = true;
         int count = 0;
         for (int i = 1; arr[i] != -1; ++i) {
-            count += (arr[1] == arr[i]) ? 1: 0;
+            count += (arr[1] == arr[i]) ? 1 : 0;
         }
         return count == arr[0];
     }
 
     @SuppressWarnings("MagicNumber")
     public static int countK(int num) {
-        if (num == kapr) {
+        if (num == RAPR) {
             return 0;
         }
         int[] digits = digitsOfNumber(num);

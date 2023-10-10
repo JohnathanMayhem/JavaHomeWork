@@ -178,7 +178,7 @@ public class SampleTest {
                 {1, 0, 0, 0, 0, 0, 0, 0}
             }
         };
-        boolean[] res = new boolean [] {true, false, false};
+        boolean[] res = new boolean[] {true, false, false};
         boolean[] evenRes = new boolean[3];
         for (int i = 0; i < 3; i++) {
             evenRes[i] = Task8.knightBoardCapture(boards[i]);
