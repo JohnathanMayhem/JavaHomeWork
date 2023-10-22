@@ -9,27 +9,27 @@ import org.junit.jupiter.api.Test;
 class TestTask4 {
     @BeforeEach
     void setUp() {
-        problem4 = new Task4();
+        task4 = new Task4();
     }
 
-    private Task4 problem4;
+    private Task4 task4;
 
     @Test
     void firstTest() {
-        String result = problem4.problem4();
+        String result = task4.problem4();
         Assertions.assertThat(result).isEqualTo("""
-            Class name: edu.hw2.Problem4
+            Class name: edu.hw2.Task4
             Method name: problem4
             """);
     }
 
     @Test
     void doubleTest() {
-        String result = problem4.doubleProblem4();
+        String result = task4.doubleProblem4();
         Assertions.assertThat(result).isEqualTo("""
-            Class name: edu.hw2.Problem4
+            Class name: edu.hw2.Task4
             Method name: problem4
-            Class name: edu.hw2.Problem4
+            Class name: edu.hw2.Task4
             Method name: doubleProblem4
             """);
     }
@@ -38,7 +38,7 @@ class TestTask4 {
     void mainTest() {
         String result = Main2.mainFourTest();
         Assertions.assertThat(result).isEqualTo("""
-            Class name: edu.hw2.Main
+            Class name: edu.hw2.Main2
             Method name: mainFourTest
             """);
     }
