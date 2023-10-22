@@ -17,7 +17,7 @@ public class TestTask2 {
     void checkSquareArea() {
         Square rect = new Square(20);
         rect.setHeight(10);
-        assertThat(rect.area()).isEqualTo(10);
+        assertThat(rect.area()).isEqualTo(100);
     }
 
 }
