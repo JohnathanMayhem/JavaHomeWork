@@ -1,3 +1,5 @@
+package edu.hw2;
+
 import edu.hw2.Main2;
 import edu.hw2.Task4;
 import org.assertj.core.api.Assertions;
