@@ -15,7 +15,6 @@ public final class PopularCommandExecutor {
         this.maxAttempts = maxAttempts;
     }
 
-    @SuppressWarnings("RegexpSinglelineJava")
     public void updatePackages() {
         try {
             tryExecute("apt update && apt upgrade -y");
