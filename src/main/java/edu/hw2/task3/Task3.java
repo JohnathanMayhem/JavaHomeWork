@@ -1,10 +1,4 @@
-package edu.hw2;
-
-import edu.hw2.task3.DefaultConnectionManager;
-import edu.hw2.task3.FaultyConnectionManager;
-import edu.hw2.task3.PopularCommandExecutor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+package edu.hw2.task3;
 
 public class Task3 {
 
