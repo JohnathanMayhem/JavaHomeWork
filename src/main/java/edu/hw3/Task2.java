@@ -5,16 +5,19 @@ import java.util.List;
 import java.util.Stack;
 
 public class Task2 {
+
+    private static String messageWrongSequence = "Wrong sequence";
+
     private Task2() {
 
     }
 
-    public static List<String> clusterize(String str) throws RuntimeException{
+    public static List<String> clusterize(String str) throws RuntimeException {
         if (str == null) {
             return null;
         }
         if (str.charAt(0) == ')') {
-            throw new RuntimeException("Wrong sequence");
+            throw new RuntimeException(messageWrongSequence);
         }
         StringBuilder stringBuilder = new StringBuilder(str.length());
         ArrayList<String> result = new ArrayList<>();
@@ -25,7 +28,7 @@ public class Task2 {
                 stringBuilder.append('(');
             } else {
                 if (stack.empty()) {
-                    throw new RuntimeException("Wrong sequence");
+                    throw new RuntimeException(messageWrongSequence);
                 }
                 stack.pop();
                 stringBuilder.append(')');
