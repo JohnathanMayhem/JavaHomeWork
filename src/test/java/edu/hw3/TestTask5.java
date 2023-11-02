@@ -6,6 +6,7 @@ import edu.hw3.Task5.Task5;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class TestTask5 {
 
@@ -33,7 +34,7 @@ public class TestTask5 {
         res1 = new ArrayList<>();
         res.add(res1);
 
-        ArrayList<ArrayList<Contact>> evenRes = new ArrayList<>();
+        ArrayList<List<Contact>> evenRes = new ArrayList<>();
         for (int i = 0; i < names.length; ++i) {
             evenRes.add(Task5.parseContacts(names[i], types[i]));
         }

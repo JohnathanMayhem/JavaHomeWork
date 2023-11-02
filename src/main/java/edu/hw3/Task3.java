@@ -2,6 +2,7 @@ package edu.hw3;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Task3 {
 
@@ -9,8 +10,8 @@ public class Task3 {
 
     }
 
-    public static HashMap<Object, Integer> freqDict(List<Object> list) {
-        HashMap<Object, Integer> counterTable = new HashMap<>();
+    public static Map<Object, Integer> freqDict(List<Object> list) {
+        Map<Object, Integer> counterTable = new HashMap<>();
         for (var i : list) {
             if (counterTable.containsKey(i)) {
                 counterTable.put(i, counterTable.get(i) + 1);

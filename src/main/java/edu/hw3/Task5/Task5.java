@@ -2,6 +2,7 @@ package edu.hw3.Task5;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Task5 {
@@ -24,8 +25,8 @@ public class Task5 {
         return contact;
     }
 
-    public static ArrayList<Contact> parseContacts(String[] arr, SortType type) {
-        ArrayList<Contact> list = new ArrayList<>();
+    public static List<Contact> parseContacts(String[] arr, SortType type) {
+        List<Contact> list = new ArrayList<>();
         if (arr == null) {
             return list;
         }

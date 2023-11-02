@@ -12,8 +12,7 @@ public class Contact implements Comparable<Contact> {
     }
 
     public Contact(String name) {
-        this.name = name;
-        this.surname = null;
+        this(name, null);
     }
 
     @Override
