@@ -3,6 +3,7 @@ package edu.hw6.Task3;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Vector;
 import java.util.regex.Pattern;
 
 public class DirStremFilter {
@@ -19,8 +20,6 @@ public class DirStremFilter {
 
     public static AbstractFilter regexContains(String regex) {
         return path -> Pattern.matches(regex, path.toString());
+        Vector<Integer> a;
     }
-
-
-
 }
