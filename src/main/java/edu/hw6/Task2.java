@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Task2 {
-    public Task2() {
+    private Task2() {
 
     }
 
@@ -22,14 +22,14 @@ public class Task2 {
         builder.append(fileName.substring(0, dotIndex));
         Integer number = 1;
         builder.append(" - copy");
-        if (Files.exists(Path.of(builder.toString()+extension))) {
+        if (Files.exists(Path.of(builder.toString() + extension))) {
             builder.append(" (");
             builder.append("%d");
             builder.append(")");
         }
         builder.append(extension);
-        while (Files.exists(Path.of(builder.toString()+".txt"))){
-            number+=1;
+        while (Files.exists(Path.of(builder.toString() + ".txt"))) {
+            number += 1;
         }
         Files.createFile(Path.of(builder.toString().formatted(number)));
     }
